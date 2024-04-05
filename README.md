@@ -24,7 +24,7 @@ react-code-test/
 #### Install dependencies and start workspace
 
 ```sh
-yarn && yarn start
+yarn && yarn dev
 ```
 
 ### Set up your CSS files
