@@ -21,3 +21,5 @@ Thumbs.db
 
 # log files
 build-storybook.log
+
+*storybook.log
