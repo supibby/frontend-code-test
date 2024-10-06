@@ -21,6 +21,6 @@
     "module": "ESNext",
     "target": "es6"
   },
-  "include": ["src", "testing", "typings", "static"],
+  "include": ["src", "testing", "typings", "static", "src/svg.d.ts"],
   "exclude": ["node_modules"]
 }
