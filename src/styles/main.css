@@ -3,7 +3,7 @@
 }
 
 .button--primary {
-  @apply bg-black text-white  hover:bg-lounge-grey active:text-lounge-grey active:bg-lounge-grey--light disabled:text-[#757272] disabled:bg-lounge-grey--light;
+  @apply bg-black text-white  hover:bg-lounge-grey active:text-lounge-grey active:bg-lounge-grey--light disabled:text-lounge-grey--darker disabled:bg-lounge-grey--light;
 }
 
 .button--secondary {
@@ -11,7 +11,7 @@
 }
 
 .button--primary.button--with-icon {
-  @apply hover:bg-[#757272] active:bg-lounge-off-white active:text-loung-grey--mid disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
+  @apply hover:bg-lounge-grey--darker active:bg-lounge-off-white active:text-loung-grey--mid disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
 }
 
 .button--secondary.button--with-icon {
@@ -19,11 +19,11 @@
 }
 
 .button--primary-outline {
-  @apply bg-transparent border border-solid border-black text-black hover:bg-loung-grey--mid active:bg-[#F0F0F0] active:border active:border-lounge-grey--dark active:text-lounge-grey--dark disabled:border-none disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
+  @apply bg-transparent border border-solid border-black text-black hover:bg-loung-grey--mid active:bg-lounge-off-white--light active:border active:border-lounge-grey--dark active:text-lounge-grey--dark disabled:border-none disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
 }
 
 .button--secondary-outline {
-  @apply bg-transparent border border-solid border-white text-white hover:bg-[#FFFFFF33] active:bg-[#FFFFFF4D] disabled:border-lounge-grey--dark disabled:text-lounge-grey--dark;
+  @apply bg-transparent border border-solid border-white text-white hover:bg-white/20 active:bg-white/30 disabled:border-lounge-grey--dark disabled:text-lounge-grey--dark;
 }
 
 .button__icon {
