@@ -18,6 +18,10 @@ const preview: Preview = {
           name: 'black',
           value: '#000000',
         },
+        {
+          name: 'lounge-grey',
+          value: '#B5B5B5',
+        },
       ],
     },
   },
