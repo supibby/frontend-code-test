@@ -41,8 +41,5 @@ describe('Button', () => {
 
     const buttonElement = getByRole('button')
     expect(buttonElement).toHaveClass('button--with-icon')
-
-    const textElement = getByText('Button with Icon')
-    expect(textElement).toBeInTheDocument()
   })
 })

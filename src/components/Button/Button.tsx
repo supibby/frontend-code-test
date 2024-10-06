@@ -14,7 +14,6 @@ const Button = ({
   const baseClasses = ['button', `button--${variant}`]
   if (loading) baseClasses.push('button--loading')
   if (Icon) baseClasses.push('button--with-icon')
-  if (loading) baseClasses.push('button--loading')
 
   return (
     <button
