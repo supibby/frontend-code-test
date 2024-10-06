@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import Button from './Button'
 import { ComponentProps } from 'react'
+import { CheckIcon } from '../../assets/icons/checkIcon'
 
 type StoryProps = ComponentProps<typeof Button>
 
@@ -18,7 +19,14 @@ const meta: Meta<StoryProps> = {
         ],
       },
     },
-    icon: { control: 'boolean' },
+    icon: {
+      control: 'select',
+      options: ['none', 'check'],
+      mapping: {
+        none: undefined,
+        check: CheckIcon,
+      },
+    },
     loading: { control: 'boolean' },
     disabled: { control: 'boolean' },
   },
@@ -45,7 +53,7 @@ export const Secondary: Story = {
 
 export const WithIcon: Story = {
   args: {
-    icon: true,
+    icon: 'check',
   },
 }
 
