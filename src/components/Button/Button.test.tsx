@@ -1,5 +1,5 @@
 // Button.test.tsx
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import Button from './Button'
 
 const MockIcon = () => <svg data-testid="mock-icon" />
@@ -32,7 +32,7 @@ describe('Button', () => {
   })
 
   test('renders button with icon correctly', () => {
-    const { getByTestId, getByRole, getByText } = render(
+    const { getByTestId, getByRole } = render(
       <Button icon={MockIcon}>Button with Icon</Button>
     )
 
