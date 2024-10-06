@@ -1,11 +1,79 @@
 .button {
-  @apply py-4 w-full max-w-[328px] rounded-full text-xs font-medium uppercase tracking-wide font-['Montserrat'] border-none;
+  @apply flex flex-row justify-center items-center py-4 w-full max-w-[328px] h-12 border-none rounded-full text-xs font-semibold uppercase tracking-wide font-['Montserrat'] leading-4 m-10 relative;
 }
 
 .button--primary {
-  @apply bg-black text-white hover:bg-[#929292];
+  @apply bg-black text-white  hover:bg-lounge-grey active:text-lounge-grey active:bg-lounge-grey--light disabled:text-[#757272] disabled:bg-lounge-grey--light;
+}
+
+.button--secondary {
+  @apply bg-white text-black border-none hover:bg-loung-grey--mid active:bg-lounge-off-white active:text-lounge-grey--dark disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
+}
+
+.button--primary.button--with-icon {
+  @apply hover:bg-[#757272] active:bg-lounge-off-white active:text-loung-grey--mid disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
+}
+
+.button--secondary.button--with-icon {
+  @apply hover:bg-lounge-off-white active:bg-lounge-off-white active:text-lounge-grey--dark disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
+}
+
+.button--primary-outline {
+  @apply bg-transparent border border-solid border-black text-black hover:bg-loung-grey--mid active:bg-[#F0F0F0] active:border active:border-lounge-grey--dark active:text-lounge-grey--dark disabled:border-none disabled:bg-lounge-off-white disabled:text-lounge-grey--dark;
+}
+
+.button--secondary-outline {
+  @apply bg-transparent border border-solid border-white text-white hover:bg-[#FFFFFF33] active:bg-[#FFFFFF4D] disabled:border-lounge-grey--dark disabled:text-lounge-grey--dark;
 }
 
 .button__icon {
-  @apply text-green-600 w-6 h-6 block;
+  @apply w-6 h-6 mr-2;
+}
+
+.button__icon svg {
+  @apply w-6 h-6;
+}
+
+.button--loading {
+  @apply cursor-not-allowed;
+}
+
+.button__loading-spinner {
+  @apply absolute inset-0 flex items-center justify-center;
+}
+
+.spinner {
+  @apply w-6 h-6;
+  animation: spin 1s linear infinite;
+}
+
+.spinner .path {
+  @apply stroke-current;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+.button__text--hidden {
+  @apply invisible;
 }
