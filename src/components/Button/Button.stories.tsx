@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import Button from './Button'
 import { ComponentProps } from 'react'
 import { CheckIcon } from '../../assets/icons/checkIcon'
@@ -42,6 +43,10 @@ type Story = StoryObj<StoryProps>
 export const Primary: Story = {
   args: {
     variant: 'primary',
+    onClick: () => {
+      console.log('hi')
+      action('button-click')('Custom click handler: hi')
+    },
   },
 }
 
