@@ -1,3 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.button {
+  @apply py-4 w-full max-w-[328px] rounded-full text-xs font-medium uppercase tracking-wide font-['Montserrat'] border-none;
+}
+
+.button--primary {
+  @apply bg-black text-white hover:bg-[#929292];
+}
+
+.button__icon {
+  @apply text-green-600 w-6 h-6 block;
+}
